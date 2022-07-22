@@ -1,34 +1,30 @@
 package Classes;
 
-import javax.swing.*;
-
-public class Swap_Game {
-    public static class Person{
+public class Constructor_and_this {
+    public static class person{
         String name;
         int age;
+        person(){
+            //Default constructor
+        }
+        person(String name,int age){
+            //parametrized
+            this.name=name;
+            this.age=age;
+        }
         void print(){
-            System.out.println(name+" "+age);
+            System.out.println(name +" "+ age);
         }
     }
-    public  static  void main(String[] arg) {
-        Person p1 = new Person();
-        p1.name = "Ranak";
-        p1.age = 22;
-        p1.print();
-        Person p2 = new Person();
-        p2.name = "Piyal";
-        p2.age = 21;
-        p2.print();
-        swap(p1, p2);
+    public static void main(String [] arg){
+        person p1=new person();
+        p1.name="Ranak";
+        p1.age=21;
+        person p2=new person("Piyal",20);//call and set the values to the constructor
         p1.print();
         p2.print();
 
-    }
-        public static void swap(Person prs1 ,Person prs2){
-        int age=prs1.age;
-        prs1.age=prs2.age;
-        prs2.age=age;
 
-        }
+
+    }
 }
-//**Note-for changing the value you have to change the heap's value not reference
