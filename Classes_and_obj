@@ -1,0 +1,21 @@
+package Classes;
+public class Classes_and_objects {
+    public  static class cl{
+        String name;
+        int age;
+        void print(){
+            System.out.println(name + " "+age);
+        }
+    }
+    public static void  main(String [] arg){
+        cl p1=new cl();//class call
+        p1.name="piyal";
+        p1.age=22;
+        p1.print();
+        cl p2=new cl();//class call
+        p2.name="Ranak";
+        p2.age=21;
+        p2.print();
+
+    }
+}
